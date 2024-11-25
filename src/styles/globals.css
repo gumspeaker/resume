@@ -1,21 +1,100 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+#root {
+  position: absolute;
+  max-width: 900px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  padding-bottom: 100px;
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@media (max-width: 600px) {
+  #root {
+    width: 90%;
+    left: 5%;
   }
 }
+ul {
+  list-style: disc;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 24px;
+  padding-inline-start: 20px;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+layerHeader {
+}
+layer {
+  display: block;
+  margin-top: 20px;
+}
+userName {
+  font-weight: 700;
+  margin: 5px 0;
+  font-size: 32px;
+}
+headerWrapper {
+  display: block;
+  margin-top: 50px;
+}
+headerInfoWrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 10px;
+  color: black;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  justify-content: space-between;
+}
+headerInfo {
+  width: 40%;
+  display: flex;
+  padding: 2.5px 0;
+  align-items: center;
+}
+headerInfoContentStyles {
+  line-height: 20px;
+  color: gray;
+  margin-left: 10px;
+}
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+educationalInfo {
+  font-weight: 700;
+  width: 100%;
+  display: flex;
+  margin-bottom: 4px;
+  justify-content: space-between;
+  align-items: center;
+}
+company {
+  margin-top: 20px;
+  font-size: 16px;
+  display: block;
+  &:first {
+    margin-top: 0px;
+  }
+}
+companyName {
+  font-weight: 700;
+}
+.blue {
+  color: #1677ff;
 }
