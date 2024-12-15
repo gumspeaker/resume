@@ -39,6 +39,7 @@ flex {
   align-items: center;
 }
 layerHeader {
+  font-size: 20px;
 }
 layer {
   display: block;
