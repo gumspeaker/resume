@@ -25,6 +25,14 @@ ul {
   line-height: 24px;
   padding-inline-start: 20px;
 }
+ol {
+  list-style: decimal;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 24px;
+  padding-inline-start: 20px;
+}
 hr {
   display: block;
   height: 1px;
