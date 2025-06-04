@@ -11,7 +11,9 @@
       电话:173-7413-1503 | <a href="mailto:17374131503@163.com">邮箱:17374131503@163.com</a> | 现居城市:杭州
     </div>
     <div>年龄:25岁 | 性别:男 </div>
-    <div>当前状态:<b>离职，随时到岗</b> | 求职意向:web前端开发 | <b>3年前端经验</b></div>
+    <div>
+      当前状态:<b>离职，随时到岗</b> | 求职意向:web前端开发 | <b>3年前端经验</b>
+    </div>
   </headerInfoWrapper>
 </headerWrapper>
 <layer>
@@ -29,8 +31,8 @@
   <layerHeader> 专业技能 </layerHeader>
   <hr />
   <ol>
-    <li> 熟悉`HTML5、CSS、JavaScript`前端知识，技术栈`react hook`为主，熟悉`nextjs`服务端渲染，熟悉`React`及其原理，熟悉`TypeScript`，拥有丰富的`React + TS`实践经验</li>
-    <li> 了解并使用过大部分前端基础工具和库 `webpack pnpm zustand tailwind antd`</li>
+    <li> 熟悉`HTML5、CSS、JavaScript`前端知识，技术栈`React hook`为主，熟悉`nextjs`服务端渲染，熟悉`React`及其原理，熟悉`TypeScript`，拥有丰富的`React + TS`实践经验</li>
+    <li> 了解并使用过大部分前端基础工具和库 `webpack pnpm zustand tailwind antd...`</li>
     <li> 了解`nodejs`，学习使用过`nestjs`和`egg js`框架。也有一定的`java`和`springBoot`学习经验，期望下一份工作能接触后端领域</li>
     <li> 熟悉前端工程化webpack建工具了解webpack打包流程及loader plugin开发 </li>
     <li> 熟悉代码开发到上线全流程，对协同开发、分支管理、项目配置等都有较深刻的最佳实践</li>
@@ -42,23 +44,50 @@
   <hr />
   <company>
     <div className="flex items-center justify-between">
-      <companyName> 纬创软件（北京）有限公司大连分公司  base 杭州 </companyName>
+      <companyName> 潮流网络杭州分公司 </companyName>
+      <div>2025年02月 - 至今</div>
+    </div>
+    web前端前端开发
+  </company>
+    <div className="ml-2">
+      <span className="mt-1 font-bold flex">NAS项目 桌面Web</span>
+      技术栈:`React Vite Antd`<br />
+      该项目是一个基于React Vite的桌面Web应用，用于管理和操作NAS设备。项目使用了Antd作为UI框架，提供了一系列功能，如文件管理、设备管理、任务管理等。功能性上对标飞牛云 群晖设备的桌面Web。
+      <ol>
+        <li>设计窗口组件: 使用react-draggable组件作为拖拽工具库，内部应用用react-router的虚拟路由管理子页面</li>
+        <li>设计全局eventBus：用于OS和App交互通信，保证相互解耦</li>
+      </ol>
+    </div>
+  <company>
+    <div className="flex items-center justify-between">
+      <companyName> 纬创软件（北京）有限公司大连分公司 base 杭州 </companyName>
       <div>2022年04月 - 2024年11月</div>
     </div>
     web前端前端开发 tiktok 国际电商开放平台
   </company>
   <div className="ml-2">
-    <span className="mt-1 font-bold">
-      Tik Tok Shop开放平台 <a target="_blank" href="https://partner.tiktokshop.com" className="blue">partner.tiktokshop.com</a>
+    <span className="mt-1 font-bold flex">
+      Tik Tok Shop开放平台{" "}
+      <a target="_blank" href="https://partner.tiktokshop.com" className="blue">
+        partner.tiktokshop.com
+      </a>
     </span>
     该平台为服务商提供的后台系统，TikTok Store向ISV、TikTok Partner和MCN开放部分能力，支持服务商的入驻、运营管理以及后续业务流程。目标是提供一个高效、稳定且灵活的开放平台，帮助服务商快速接入和扩展。
     <ol>
-      <li><b>性能优化</b>: 前端异步import加载路由，pwa缓存，优化分包策略，往html写入静态内容...</li>
-      <li><b>微前端主子应用通信</b>: 用于微前端提供global user信息和公用组件（问卷等）给子应用，已被大部分子应用使用</li>
-      <li>维护迭代<b>低代码表单</b>功能: 运营人员通过动态表单生成上百个表单，作为入驻信息填写表单，线上有80+表单，节省大量人力。</li>
+      <li>
+        <b>性能优化</b>: 前端异步import加载路由，pwa缓存，优化分包策略，利用rs-doctor分析各类包体积占用，增加br gzip两种格式静态压缩，减少传输体积，往html写入静态内容...
+      </li>
+      <li>
+        <b>微前端主子应用通信</b>: 用于微前端提供global user信息和公用组件（问卷等）给子应用，已被大部分子应用使用
+      </li>
+      <li>
+        维护迭代<b>低代码表单</b>功能: 运营人员通过动态表单生成上百个表单，作为入驻信息填写表单，线上有80+表单，节省大量人力。
+      </li>
       <li>解决安全工单：CSRF 防御，XSS防御，接入CSP安全策略。</li>
       <li>接入公司内部的e2e服务，减少了QA大量回归用例的成本，和QA共建了e2e 报警体系。</li>
-      <li>服务发布功能/核心业务模块: 一个服务商发布服务的表单是多市场维度+多语言维度的复杂表单，将所有逻辑抽离到store中维护逻辑，<b>React只负责渲染，逻辑和数据都存在于store，此架构提高了前端代码的可维护性，并为团队提供了最佳实践模板</b></li>
+      <li>
+        服务发布功能/核心业务模块: 一个服务商发布服务的表单是多市场维度+多语言维度的复杂表单，将所有逻辑抽离到store中维护逻辑，<b>React只负责渲染，逻辑和数据都存在于store，此架构提高了前端代码的可维护性，并为团队提供了最佳实践模板</b>
+      </li>
       <li>日常维护开放平台主站的迭代，主站日均pv大于3w，在职期间无大型线上事故。主要维护服务商入驻，服务发布，Api测试工具，工单系统，应用沙箱，服务授权</li>
     </ol>
     <div>
@@ -66,9 +95,13 @@
         <b>对内运营平台子应用</b>
       </div>
       <ol>
-        <li>流程图编排功能: 使用antv来作为基础实现，<b>难点:并查集查询是否有多个子树，DFS判断循环图。</b></li>
+        <li>
+          流程图编排功能: 使用antv来作为基础实现，<b>难点:并查集查询是否有多个子树，DFS判断循环图。</b>
+        </li>
         <li>日常维护: tikTok的达人任务后台以及达人管理后台的功能迭代，稳定完成了达人多任务的上线</li>
-        <li>维护迭代<b>权限组件</b></li>
+        <li>
+          维护迭代<b>权限组件</b>
+        </li>
         <li>使用邻接矩阵实现商品SKU需求</li>
       </ol>
     </div>
@@ -94,13 +127,21 @@
     web前端前端开发 电商部门
   </company>
   <div className="ml-2">
-    技术栈:`react+Typescript+nextjs`
-    <div className="mt-1 font-bold">
-      官网展示类项目 <a className="blue" href="https://mall.tuya.com" target="_blank">https://mall.tuya.com</a>
+    技术栈:`React+Typescript+Nextjs`
+    <div className="mt-1 font-bold flex">
+      官网展示类项目{" "}
+      <a className="blue" href="https://mall.tuya.com" target="_blank">
+        https://mall.tuya.com
+      </a>
     </div>
     <div>项目描述: 涂鸦商城的官网，用于引流宣传引导</div>
-     <div>责任描述: 利用媒体查询做到三端响应式适配，服务端渲染以达到更好的seo，并做了一定的FCP，LCP优化，图片懒加载，组件懒加载，利用异步import的能力，实现各自端只加载各自端端动画</div>
-    <div className="mt-1 font-bold">b端后台 <a className="blue" href="https://sell.tuya.com" target="_blank">https://sell.tuya.com</a></div>
+    <div>责任描述: 利用媒体查询做到三端响应式适配，服务端渲染以达到更好的seo，并做了一定的FCP，LCP优化，图片懒加载，组件懒加载，利用异步import的能力，实现各自端只加载各自端端动画</div>
+    <div className="mt-1 font-bold flex">
+      b端后台{" "}
+      <a className="blue" href="https://sell.tuya.com" target="_blank">
+        https://sell.tuya.com
+      </a>
+    </div>
     <div>项目描述: 为商家提供快速搭建商城的能力，商城后台的功能有订单管理，商城首页设置，场景设置，商品信息维护，商城基础信息配置，支付配置，导入第三方商品，由公司内部统一的登录sso鉴权体系来验证登录</div>
     <div>责任描述: shopify后台首页搭建采用拖拽生成楼层的方式。 接入亚马逊商城的商品信息导入功能。接入公司内部的客服服务。</div>
     <div className="mt-1 font-bold">c端商城</div>
