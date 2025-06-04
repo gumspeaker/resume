@@ -46,23 +46,23 @@ flex {
   justify-content: space-between;
   align-items: center;
 }
-layerHeader {
+layer-header {
   font-size: 20px;
 }
 layer {
   display: block;
   margin-top: 20px;
 }
-userName {
+user-name {
   font-weight: 700;
   margin: 5px 0;
   font-size: 32px;
 }
-headerWrapper {
+header-wrapper {
   display: block;
   margin-top: 50px;
 }
-headerInfoWrapper {
+header-info-wrapper {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -85,7 +85,7 @@ headerInfoContentStyles {
   margin-left: 10px;
 }
 
-educationalInfo {
+educational-info {
   font-weight: 700;
   width: 100%;
   display: flex;
@@ -101,7 +101,7 @@ company {
     margin-top: 0px;
   }
 }
-companyName {
+company-name {
   font-weight: 700;
 }
 .blue {

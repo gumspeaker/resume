@@ -1,12 +1,12 @@
-<headerWrapper>
-  <userName>
+<header-wrapper>
+  <user-name>
     {" "}
     <a target="_blank" href="https://resume-xzh.vercel.app">
       徐志豪
     </a>{" "}
-  </userName>
+  </user-name>
   <hr />
-  <headerInfoWrapper>
+  <header-info-wrapper>
     <div>
       电话:173-7413-1503 | <a href="mailto:17374131503@163.com">邮箱:17374131503@163.com</a> | 现居城市:杭州
     </div>
@@ -14,21 +14,21 @@
     <div>
       当前状态:<b>离职，随时到岗</b> | 求职意向:web前端开发 | <b>3年前端经验</b>
     </div>
-  </headerInfoWrapper>
-</headerWrapper>
+  </header-info-wrapper>
+</header-wrapper>
 <layer>
-  <layerHeader> 教育经历 </layerHeader>
+  <layer-header> 教育经历 </layer-header>
   <hr />
   <college>
-    <educationalInfo>
+    <educational-info>
       <div>嘉兴学院</div>
       <div>2017年09月 - 2021年06月</div>
-    </educationalInfo>
+    </educational-info>
     专业: 网络工程 | 证书：计算机二级 CET 4
   </college>
 </layer>
 <layer>
-  <layerHeader> 专业技能 </layerHeader>
+  <layer-header> 专业技能 </layer-header>
   <hr />
   <ol>
     <li> 熟悉`HTML5、CSS、JavaScript`前端知识，技术栈`React hook`为主，熟悉`nextjs`服务端渲染，熟悉`React`及其原理，熟悉`TypeScript`，拥有丰富的`React + TS`实践经验</li>
@@ -40,11 +40,11 @@
 </layer>
 
 <layer>
-  <layerHeader> 工作经历 </layerHeader>
+  <layer-header> 工作经历 </layer-header>
   <hr />
   <company>
     <div className="flex items-center justify-between">
-      <companyName> 潮流网络杭州分公司 </companyName>
+      <company-name> 潮流网络杭州分公司 </company-name>
       <div>2025年02月 - 至今</div>
     </div>
     web前端前端开发
@@ -56,11 +56,13 @@
       <ol>
         <li>设计窗口组件: 使用react-draggable组件作为拖拽工具库，内部应用用react-router的虚拟路由管理子页面</li>
         <li>设计全局eventBus：用于OS和App交互通信，保证相互解耦</li>
+        <li>完成os的设置App以及资源监控App(echart表单)</li>
+        <li>设计App代码隔离方案：各自App有各自的业务逻辑，防止仓库膨胀难以维护，从iframe，主子应用，workspace三种方案里调研，最终采用pnpm workspace方案</li>
       </ol>
     </div>
   <company>
     <div className="flex items-center justify-between">
-      <companyName> 纬创软件（北京）有限公司大连分公司 base 杭州 </companyName>
+      <company-name> 纬创软件（北京）有限公司大连分公司 base 杭州 </company-name>
       <div>2022年04月 - 2024年11月</div>
     </div>
     web前端前端开发 tiktok 国际电商开放平台
@@ -121,7 +123,7 @@
   <br />
   <company>
     <div className="flex items-center justify-between">
-      <companyName> 杭州涂鸦科技有限公司 </companyName>
+      <company-name> 杭州涂鸦科技有限公司 </company-name>
       <div>2021年06月 - 2022年03月</div>
     </div>
     web前端前端开发 电商部门
