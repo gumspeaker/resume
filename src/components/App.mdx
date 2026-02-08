@@ -10,9 +10,9 @@
     <div>
       电话:173-7413-1503 | <a href="mailto:17374131503@163.com">邮箱:17374131503@163.com</a> | 现居城市:杭州
     </div>
-    <div>年龄:25岁 | 性别:男 </div>
+    <div>年龄:26岁 | 性别:男 </div>
     <div>
-      当前状态:<b>在职，随时到岗</b> | 求职意向:web前端开发 | <b>3年前端经验</b>
+      当前状态:<b>在职，随时到岗</b> | 求职意向:web前端开发 | <b>4.5年前端经验</b>
     </div>
   </header-info-wrapper>
 </header-wrapper>
@@ -21,7 +21,7 @@
   <hr />
   <college>
     <educational-info>
-      <div>嘉兴学院</div>
+      <div>嘉兴大学</div>
       <div>2017年09月 - 2021年06月</div>
     </educational-info>
     专业: 网络工程 | 证书：计算机二级 CET 4
@@ -31,10 +31,10 @@
   <layer-header> 专业技能 </layer-header>
   <hr />
   <ol>
-    <li> 熟悉`HTML5、CSS、JavaScript`前端知识，技术栈`React hook`为主，熟悉`nextjs`服务端渲染，熟悉`React`及其原理，熟悉`TypeScript`，拥有丰富的`React + TS`实践经验</li>
+    <li> 熟悉前端知识，技术栈`React hook`为主，熟悉`nextjs`服务端渲染，熟悉`React`及其原理，熟悉`TypeScript`</li>
     <li> 了解并使用过大部分前端基础工具和库 `webpack pnpm zustand tailwind antd...`</li>
     <li> 了解`nodejs`，学习使用过`nestjs`和`egg js`框架。也有一定的`java`和`springBoot`学习经验，期望下一份工作能接触后端领域</li>
-    <li> 熟悉前端工程化webpack建工具了解webpack打包流程及loader plugin开发 </li>
+    {/* <li> 熟悉前端工程化webpack建工具了解webpack打包流程及loader plugin开发 </li> */}
     <li> 熟悉代码开发到上线全流程，对协同开发、分支管理、项目配置等都有较深刻的最佳实践</li>
   </ol>
 </layer>
@@ -50,15 +50,32 @@
     web前端前端开发
   </company>
     <div className="ml-2">
-      <span className="mt-1 font-bold flex">NAS项目 桌面Web</span>
-      技术栈:`React Vite Antd`<br />
-      该项目是一个基于React Vite的桌面Web应用，用于管理和操作NAS设备。项目使用了Antd作为UI框架，提供了一系列功能，如文件管理、设备管理、任务管理等。功能性上对标飞牛云 群晖设备的桌面Web。
+      <span className="mt-1 font-bold flex">NAS 桌面 Web 系统</span>
+      该项目是一个基于React Vite的桌面Web应用，用于管理和操作NAS设备。功能性上对标飞牛云 群晖设备的桌面Web。
       <ol>
-        <li>设计窗口组件: 使用react-draggable组件作为拖拽工具库，内部应用用react-router的虚拟路由管理子页面</li>
-        <li>设计全局eventBus：用于OS和App交互通信，保证相互解耦</li>
-        <li>完成os的设置App以及资源监控App(echart表单)</li>
-        <li>设计App代码隔离方案：各自App有各自的业务逻辑，防止仓库膨胀难以维护，从iframe，主子应用，workspace三种方案里调研，最终采用pnpm workspace方案</li>
+        <li>基于 React + Hooks 封装了高度可配置的拖拽式窗口系统，并附带大量（如 useApp, useUser, useDevice,useWs）实现窗口状态的精细化控制</li>
+        <li>设计并实现了全局全局 EventBus 调度中心，构建了 OS 宿主与子应用之间的通信协议，实现了应用间低耦合、高内聚的交互逻辑</li>
+        <li>
+          <b> 设计了三种app模式以适配不同的业务需求和隔离级别：</b>
+          <ol>
+          <li> Iframe 模式： 用于集成强隔离的第三方 Web 服务。</li>
+           <li> Rspack/Module Federation： 实现了远程组件化 App，支持与宿主通信</li>
+           <li> Monorepo 内置： 针对核心系统应用，利用 pnpm workspace 实现代码共享与极速构建</li>
+          </ol>
+        </li>
       </ol>
+    </div>    
+    <div className="ml-2">
+      <span className="mt-1 font-bold flex">GDS监控 设备管理器</span>
+      用于管理监控设备，提供同步和下发配置到设备的功能，支持播放设备视频流等功能
+      <ol>
+        <li>抽象环境适配层，支持一套代码在 Electron 桌面端、标准浏览器、以及 NAS 内部 Iframe 中无缝运行，统一了不同环境下的 API 调用</li>
+        <li>协议转封装： 实现了一套轻量级的 WebSocket 二进制流实时转封装（jmux）方案，在前端将裸流数据封装为 FMP4 格式，利用 Media Source Extensions (MSE) 实现低延迟播放。<b>显著降低了设备解码占用CPU</b></li>
+        <li>
+        针对部分操作系统下的浏览器无法硬件加速 H.265 的痛点，<b>自研了降级播放方案</b>：基于 WebAssembly 编译 FFmpeg 解码模块，在 Worker 线程进行视频帧提取。
+        利用 YUV 数据解析并映射至 Canvas 渲染，实现了在无硬件加速环境下流畅播放 1080P H.265 监控码流。      
+        </li>
+</ol>
     </div>
   <company>
     <div className="flex items-center justify-between">
@@ -68,29 +85,25 @@
     web前端前端开发 tiktok 国际电商开放平台
   </company>
   <div className="ml-2">
-    <span className="mt-1 font-bold flex">
-      Tik Tok Shop开放平台{" "}
+    <span className="mt-1 mb-1 font-bold flex">
+      Tik Tok Shop开放平台
       <a target="_blank" href="https://partner.tiktokshop.com" className="blue">
-        partner.tiktokshop.com
+      partner.tiktokshop.com
       </a>
     </span>
     该平台为服务商提供的后台系统，TikTok Store向ISV、TikTok Partner和MCN开放部分能力，支持服务商的入驻、运营管理以及后续业务流程。目标是提供一个高效、稳定且灵活的开放平台，帮助服务商快速接入和扩展。
     <ol>
       <li>
-        <b>性能优化</b>: 前端异步import加载路由，pwa缓存，优化分包策略，利用rs-doctor分析各类包体积占用，增加br gzip两种格式静态压缩，减少传输体积，往html写入静态内容...
+        维护迭代<b>低代码表单</b>功能: 运大幅提升多国家业务接入与迭代效率，线上有80+表单，节省大量人力。
       </li>
+      <li>为站点接入CSRF 防御，XSS防御，CSP安全策略。</li>
       <li>
-        <b>微前端主子应用通信</b>: 用于微前端提供global user信息和公用组件（问卷等）给子应用，已被大部分子应用使用
+        <b>性能优化</b>:通过包拆分、首屏渲染优化、PWA 等手段显著改善加载与交互体验，并构建全站埋点与体验度量体系支撑业务决策。
       </li>
-      <li>
-        维护迭代<b>低代码表单</b>功能: 运营人员通过动态表单生成上百个表单，作为入驻信息填写表单，线上有80+表单，节省大量人力。
-      </li>
-      <li>解决安全工单：CSRF 防御，XSS防御，接入CSP安全策略。</li>
       <li>接入公司内部的e2e服务，减少了QA大量回归用例的成本，和QA共建了e2e 报警体系。</li>
       <li>
-        服务发布功能/核心业务模块: 一个服务商发布服务的表单是多市场维度+多语言维度的复杂表单，将所有逻辑抽离到store中维护逻辑，<b>React只负责渲染，逻辑和数据都存在于store，此架构提高了前端代码的可维护性，并为团队提供了最佳实践模板</b>
+      负责开放平台前端架构与核心模块建设，打通服务入驻、发布、审核、商家订阅的完整业务链路。主要维护服务商入驻，服务发布，Api测试工具，工单系统，应用沙箱，服务授权
       </li>
-      <li>日常维护开放平台主站的迭代，主站日均pv大于3w，在职期间无大型线上事故。主要维护服务商入驻，服务发布，Api测试工具，工单系统，应用沙箱，服务授权</li>
     </ol>
     <div>
       <div className="mt-4">
@@ -98,13 +111,12 @@
       </div>
       <ol>
         <li>
-          流程图编排功能: 使用antv来作为基础实现，<b>难点:并查集查询是否有多个子树，DFS判断循环图。</b>
+          达人触达策略功能，类似编排流程图功能，提高运营编排达人触达策略的灵活性和效率
         </li>
-        <li>日常维护: tikTok的达人任务后台以及达人管理后台的功能迭代，稳定完成了达人多任务的上线</li>
+        <li>日常维护: tikTok的达人任务后台以及达人管理后台的功能迭代</li>
         <li>
-          维护迭代<b>权限组件</b>
+          维护迭代权限组件
         </li>
-        <li>使用邻接矩阵实现商品SKU需求</li>
       </ol>
     </div>
     <div>
@@ -112,11 +124,8 @@
         <b>工程方面</b>
       </div>
       <ol>
-        <li>项目从yarn迁移到pnpm: 日常开发速度提升</li>
-        <li>fetch 封装：cancelable, 上报log id，登录过期重定向，请求之前的域名获取 </li>
-        <li>国际化改造: 封装i18n入口，兜底项目i18n加载失败的场景</li>
-        <li>主子应用的样式隔离方案</li>
-        <li>TTP-SYNC 代码同步 CLI 工具:利用代码仓库的同步能力结合 Pipeline，把 CN Bnpm 上的包，快速的同步到 TTP 美国环境Bnpm 上。</li>
+        <li>fetch 封装：cancelable, 上报log id，登录过期重定向，请求之前的域名获取，提高开发效率 </li>
+        <li>国际化改造，提高了线上i18n渲染的稳定性</li>
       </ol>
     </div>
   </div>
